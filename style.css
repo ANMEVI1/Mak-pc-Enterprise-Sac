@@ -1,0 +1,702 @@
+/* Importar Google Fonts - Tipografía empresarial */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* Variables CSS para identidad corporativa */
+:root {
+    --primary-blue: #1e3a8a;
+    --secondary-blue: #3b82f6;
+    --light-blue: #60a5fa;
+    --cyan-color: #0891b2;
+    --yellow-accent: #fbbf24;
+    --dark-yellow: #f59e0b;
+    --white: #ffffff;
+    --light-gray: #f1f5f9;
+    --medium-gray: #64748b;
+    --dark-gray: #334155;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --max-width: 1200px;
+}
+
+/* Header empresarial moderno */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow-light);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 1rem; 
+    display: block;
+    filter: none;
+}
+
+header p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem; 
+    color: var(--dark-gray);
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+header p a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid var(--yellow-accent);
+    padding-bottom: 2px;
+    transition: var(--transition);
+}
+
+
+header p a:hover {
+    color: var(--cyan-color);
+    border-bottom-color: var(--cyan-color);
+}
+
+/* Navegación empresarial limpia */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    box-shadow: var(--shadow-light);
+}
+
+nav ul li {
+    border-left: none !important;
+    background: none; /* quita el fondo gris si no lo quieres */
+    padding: 0;       /* opcional, ajusta márgenes */
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    position: relative;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    background: var(--light-blue);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+
+nav ul li a.active {
+    background: var(--primary-blue);
+    color: var(--white);
+    box-shadow: var(--shadow-light);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 3px;
+    background: var(--yellow-accent);
+    border-radius: 2px;
+}
+
+/* Main content con espaciado profesional */
+main {
+    margin-top: 250px;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+/* Secciones con diseño corporativo */
+section {
+    background: var(--white);
+    margin: 4rem 0;
+    padding: 4rem 3rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    border-top: 4px solid var(--primary-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--yellow-accent), var(--cyan-color));
+    opacity: 0.1;
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* Títulos empresariales */
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-blue);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--yellow-accent));
+    border-radius: 2px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-blue);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* espacio entre el ícono y el texto */
+    
+}
+h3 img {
+    width: 25px;
+    height: auto;
+}
+
+h4 {
+    color: var(--cyan-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Párrafos con mejor legibilidad */
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--medium-gray);
+    text-align: justify;
+    align-items: center;
+    gap: 8px; /* espacio entre icono y texto */
+}
+/* SOLO para párrafos con íconos */
+.p-icono {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Enlaces con estilo empresarial */
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--cyan-color);
+}
+
+/* Botones de llamada a la acción */
+.cta-button {
+    display: inline-block;
+    background: var(--yellow-accent);
+    color: var(--primary-blue);
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+}
+
+.cta-button:hover {
+    background: var(--dark-yellow);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    color: var(--white);
+}
+
+/* Imágenes profesionales */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    margin: 1.5rem 0;
+}
+
+/* Listas empresariales */
+ul {
+    margin-bottom: 2rem;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 1rem;
+    padding: 0.8rem 0 0.8rem 2.5rem;
+    position: relative;
+    background: var(--light-gray);
+    border-left: 3px solid var(--cyan-color);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* imagen arriba, texto abajo */
+    align-items: center;    /* centrado horizontal */
+    margin: 1rem 0;
+}
+
+ul li::before {
+    content: none;
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--yellow-accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+/* Sección Tienda con diseño especial */
+#Tienda {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--cyan-color) 100%);
+    color: var(--white);
+}
+
+#Tienda h2, #Tienda h3 {
+    color: var(--white);
+}
+
+#Tienda p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Horario con estilo empresarial */
+.horario-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* Sección de contacto profesional */
+.contacto-info {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 100%);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--yellow-accent);
+    box-shadow: var(--shadow-light);
+}
+
+.contacto-info h2 {
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+}
+
+.contacto-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    padding: 0.8rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.contacto-info p:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.contacto-info p img {
+    margin: 0 1rem 0 0;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contacto-info p strong {
+    color: var(--primary-blue);
+    font-weight: 600;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.contacto-info p a {
+    display: flex;
+    align-items: center;
+    color: var(--cyan-color);
+    font-weight: 500;
+}
+
+/* Mapa con marco empresarial */
+.mapa-container {
+    margin-top: 3rem;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    border: 4px solid var(--white);
+}
+
+/* Footer empresarial */
+footer {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 4rem 0 2rem;
+    margin-top: 6rem;
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.Footer-Mayor {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-01 h3.logo {
+    color: var(--yellow-accent);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.footer-01 p {
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.footer-01 h4 {
+    color: var(--yellow-accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.social-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links ul li {
+    list-style: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li::before {
+    display: none;
+}
+
+.social-links ul li a {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links ul li a:hover {
+    background: var(--yellow-accent);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.social-links ul li a img {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.footer-02 h4 {
+    color: var(--yellow-accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-02 ul {
+    margin: 0;
+}
+
+.footer-02 ul li {
+    background: none;
+    border: none;
+    padding: 0.3rem 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-02 ul li::before {
+    display: none;
+}
+
+.footer-02 ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+    font-weight: 400;
+}
+
+.footer-02 ul li a:hover {
+    color: var(--yellow-accent);
+    padding-left: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design Empresarial */
+@media (max-width: 968px) {
+    .Footer-Mayor {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    section {
+        padding: 3rem 2rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    header img {
+        max-width: 150px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    nav ul li a {
+        padding: 0.8rem 1rem;
+        text-align: center;
+    }
+    
+    main {
+        margin-top: 320px;
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .contacto-info {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contacto-info p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .contacto-info p strong {
+        min-width: auto;
+    }
+    
+    iframe {
+        height: 350px;
+    }
+    
+    .footer-container {
+        padding: 0 1rem;
+    }
+    
+    .social-links ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 360px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contacto-info p {
+        padding: 1rem;
+    }
+    
+    iframe {
+        height: 300px;
+    }
+}
+
+/* Animaciones empresariales suaves */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Scroll suave empresarial */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus states profesionales */
+*:focus {
+    outline: 2px solid var(--yellow-accent);
+    outline-offset: 2px;
+}
+#Convenios ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+#Convenios li {
+    text-align: center;
+}
+
+#Convenios li img {
+    height: 100px;   /* fuerza misma altura */
+    width: auto;     /* mantiene proporción */
+    display: block;
+    margin: 0 auto 0.5rem;
+}
+
+#Convenios li a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+    text-decoration: none;
+}
